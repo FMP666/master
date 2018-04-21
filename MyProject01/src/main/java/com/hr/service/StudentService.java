@@ -8,4 +8,6 @@ public interface StudentService {
 	List<Student> selectAll();
 	
 	int delete(int sid);
+	
+	Student selectById(int sid);
 }

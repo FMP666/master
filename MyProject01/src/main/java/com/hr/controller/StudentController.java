@@ -28,4 +28,10 @@ public class StudentController {
 		System.out.println(delete );
 		return selectAll(map);
 	}
+	@RequestMapping("/selectById")
+	public String selectById(int sid,ModelMap map) {
+		Student student = ss.selectById(sid);
+		map.put("stu", student);
+		return "/update.jsp";
+	}
 }
