@@ -25,7 +25,7 @@ public class StudentController {
 	@RequestMapping("/delete")
 	public String delete(int sid,ModelMap map) {
 		int delete = ss.delete(sid);
-		System.out.println(i);
+		System.out.println(delete );
 		return selectAll(map);
 	}
 }
