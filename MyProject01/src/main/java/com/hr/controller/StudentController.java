@@ -19,10 +19,12 @@ public class StudentController {
 	@RequestMapping("/selectAll")
 	public String selectAll(ModelMap map){
 		List<Student> list = ss.selectAll();
-		for (Student student : list) {
-			System.out.println(student.getSid()+" "+student.getSname());
-		}
 		map.put("list", list);
 		return "/list.jsp";
+	}
+	@RequestMapping("/delete")
+	public String delete(int sid,ModelMap map) {
+		int delete = ss.delete(sid);
+		return selectAll(map);
 	}
 }

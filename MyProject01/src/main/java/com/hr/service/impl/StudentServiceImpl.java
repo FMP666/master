@@ -19,5 +19,10 @@ public class StudentServiceImpl implements StudentService {
 		// TODO Auto-generated method stub
 		return sm.selectAll();
 	}
+	@Override
+	public int delete(int sid) {
+		// TODO Auto-generated method stub
+		return sm.deleteByPrimaryKey(sid);
+	}
 
 }
