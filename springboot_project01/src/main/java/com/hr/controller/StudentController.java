@@ -18,7 +18,7 @@ public class StudentController {
 	private StudentService ss;
 	@RequestMapping("/selectAll")
 	public String selectAll(Map<String, Object> map){
-		System.out.println("这是controller类");
+		System.out.println("这是controller类1");
 		List<Student> list = ss.selectAll();
 		map.put("list", list);
 		return "list";
